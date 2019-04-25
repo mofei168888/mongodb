@@ -8,7 +8,8 @@
 FROM ubuntu:latest
 
 # Install MongoDB.
-RUN apt-get update
+
+RUN apt-get update && apt-get install -my wget gnupg
 
 RUN \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
