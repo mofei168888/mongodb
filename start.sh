@@ -1,4 +1,5 @@
 #!/bin/bash
+#centquant mongodb Rep Set
 
 # Create database directories
 mkdir /data/db/db-001
