@@ -10,7 +10,7 @@ FROM ubuntu:latest
 # Install MongoDB.
 
 RUN apt-get update &&  apt-get install wget
-RUN apt-get install -my wget gnupg
+RUN apt-get install gnupg
 
 RUN cd /source/  wget "https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb"
 
