@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get install wget -y
 RUN apt-get install gnupg -y
 
-RUN cd /source/  wget "https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb"
+RUN cd /source/ && wget "https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb"
 
 RUN dpkg -i  mongodb-org-server_4.0.9_amd64.deb
 
