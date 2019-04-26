@@ -9,4 +9,4 @@ mongod --config /conf/mongo.conf
 
 
 # Run mongo as the running process, this is required to keep the docker process running
-mongo
+#mongo
