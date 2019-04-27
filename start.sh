@@ -8,5 +8,4 @@ mkdir -p /data/db/db-001
 mongod --config /conf/mongo.conf  --fork
 
 
-# Run mongo as the running process, this is required to keep the docker process running
-mongo
+docker run -idt --name=monitor-db -p 27017:27017  mongo --bind_ip_all
