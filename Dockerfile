@@ -5,23 +5,21 @@
 #centquant
 #maintainance <chen.bin@uxsoft.com>
 # Pull base image.
-FROM ubuntu:latest
+#Use the local images of ubuntu 14.04
+FROM dockerfile/ubuntu
 
 # Install MongoDB.
 
-RUN apt-get update
-RUN apt-get install wget -y
-RUN apt-get install gnupg -y
-
-RUN mkdir -p /source && cd /source
-RUN  wget "https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb"
-
-RUN cd /source && dpkg -i  mongodb-org-server_4.0.9_amd64.deb
-
+RUN \
+  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
+  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
+  apt-get update && \
+  apt-get install -y mongodb-org && \
+  rm -rf /var/lib/apt/lists/*
 
 # Define mountable directories.
 #VOLUME ["/data/db"]
-RUN mkdir -p /data/da
+RUN mkdir -p /data/db
 
 # Define working directory.
 WORKDIR /
