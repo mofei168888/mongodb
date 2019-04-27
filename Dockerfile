@@ -19,7 +19,7 @@ RUN \
 
 # Define mountable directories.
 #VOLUME ["/data/db"]
-#RUN mkdir -p /data/db
+#RUN mkdir -p /data/db no need
 
 # Define working directory.
 WORKDIR /
