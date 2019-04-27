@@ -6,7 +6,7 @@
 #maintainance <chen.bin@uxsoft.com>
 # Pull base image.
 #Use the local images of ubuntu 14.04
-FROM dockerfile/ubuntu
+FROM ubuntu:16.04
 
 # Install MongoDB.
 
