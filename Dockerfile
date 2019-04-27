@@ -5,8 +5,8 @@
 #centquant
 #maintainance <chen.bin@uxsoft.com>
 # Pull base image.
-#Use the local images of ubuntu 16.04
-FROM ubuntu:16.04
+#Use the local images of ubuntu 14.04
+FROM ubuntu:14.04
 
 # Install MongoDB.
 
