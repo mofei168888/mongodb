@@ -8,7 +8,7 @@
 #Use the local images of ubuntu 14.04
 FROM ubuntu:16.04
 
-# Install MongoDB.
+# Install MongoDB. 4.0.9
 
 RUN \
   apt-get update && \
