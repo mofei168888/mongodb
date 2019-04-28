@@ -6,16 +6,19 @@
 #maintainance <chen.bin@uxsoft.com>
 # Pull base image.
 #Use the local images of ubuntu 14.04
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 # Install MongoDB.
 
 RUN \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
-  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
   apt-get update && \
-  apt-get install -y mongodb-org && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get install -y wget && \
+  apt-get install -f && \
+  cd /data && \
+  wget https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb && \
+  dpkg -i mongodb-org-server_4.0.9_amd64.deb && \
+  wget https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-shell_4.0.9_amd64.deb && \
+  dpkg -i mongodb-org-shell_4.0.9_amd64.deb
 
 # Define mountable directories.
 #VOLUME ["/data/db"]
