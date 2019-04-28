@@ -13,10 +13,11 @@ FROM ubuntu:16.04
 RUN \
   apt-get update && \
   apt-get install -y wget && \
-  apt-get install -f && \
   mkdir -p /data && \
   cd /data && \
   wget https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-server_4.0.9_amd64.deb && \
+  dpkg -i mongodb-org-server_4.0.9_amd64.deb && \
+  apt-get install -f && \
   dpkg -i mongodb-org-server_4.0.9_amd64.deb && \
   wget https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/4.0/multiverse/binary-amd64/mongodb-org-shell_4.0.9_amd64.deb && \
   dpkg -i mongodb-org-shell_4.0.9_amd64.deb
