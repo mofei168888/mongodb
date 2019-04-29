@@ -11,10 +11,3 @@ mongod --config /conf/mongo.conf  --fork --bind_ip_all
 
 # Run mongo as the running process, this is required to keep the docker process running
 mongo
-use admin
-db.createUser(
-  {
-    user: "uxsoft",
-    pwd: "soFt10",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" }]
-  }）
