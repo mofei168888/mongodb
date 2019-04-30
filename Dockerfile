@@ -24,7 +24,6 @@ RUN \
 # Define mountable directories.
 #VOLUME ["/data/db"]
 #RUN mkdir -p /data/db no need
-RUN mkdir /conf
 # Define working directory.
 WORKDIR /
 
