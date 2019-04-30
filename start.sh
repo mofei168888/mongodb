@@ -12,3 +12,4 @@ mongod --config /conf/mongo.conf  --fork --auth
 
 # Run mongo as the running process, this is required to keep the docker process running
 mongo
+cat logpath=/var/log/mongodb/mongodb-db-001.log
