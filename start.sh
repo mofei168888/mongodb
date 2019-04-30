@@ -15,6 +15,7 @@ cd /path
 ls -al
 cd to
 ls -al
+cat keyfile
 cd /var/log/mongodb/
 ls -al
 cat mongodb-db-001.log
