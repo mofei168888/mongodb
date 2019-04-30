@@ -32,6 +32,7 @@ EXPOSE 27017
 # Copy required files over to container
 COPY conf/ /conf/
 COPY conf/keyfile  /path/to
+RUN chmod 600 /path/to/keyfile
 COPY start.sh /start.sh
 
 # Run start shell when container launches
