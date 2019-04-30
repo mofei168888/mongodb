@@ -30,11 +30,9 @@ WORKDIR /
 EXPOSE 27017
 
 # Copy required files over to container
-RUN mkdir -p /path/to
-RUN mkdir -p /conf
+
 COPY conf/ /conf/
-COPY conf/keyfile  /path/to
-RUN chmod 600 /path/to/keyfile
+RUN chmod 600 /conf/keyfile
 COPY start.sh /start.sh
 
 # Run start shell when container launches
