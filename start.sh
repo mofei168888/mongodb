@@ -11,7 +11,9 @@ mongod --config /conf/mongo.conf  --fork
 
 
 # Run mongo as the running process, this is required to keep the docker process running
-cd /path/to
+cd /path
+ls -al
+cd to
 ls -al
 cd /var/log/mongodb/
 ls -al
