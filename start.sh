@@ -3,7 +3,7 @@
 
 # Create database directories
 mkdir -p /data/db/db-001
-#mkdir -p /path/to
+mkdir -p /path/to
 
 
 # Run mongo replica sets using config files
