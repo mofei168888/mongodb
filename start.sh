@@ -7,10 +7,11 @@ mkdir -p /data/db/db-001
 
 
 # Run mongo replica sets using config files
-mongod --config /conf/mongo.conf  --fork --auth
+mongod --config /conf/mongo.conf  --fork
 
 
 # Run mongo as the running process, this is required to keep the docker process running
 cd /var/log/mongodb/
 ls -al
 cat logpath=/var/log/mongodb/mongodb-db-001.log
+mongo
