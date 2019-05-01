@@ -30,10 +30,12 @@ WORKDIR /
 EXPOSE 27017
 
 # Copy required files over to container
-
-COPY conf/ /conf/
+RUN openssl rand -base64 745 > conf/keyfile
 RUN chmod 600 /conf/keyfile
+COPY conf/ /conf/
 COPY start.sh /start.sh
 
 # Run start shell when container launches
 CMD ["sh", "start.sh"]
+
+
