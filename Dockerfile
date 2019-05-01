@@ -30,6 +30,7 @@ WORKDIR /
 EXPOSE 27017
 
 # Copy required files over to container
+RUN mkdir -p /conf
 RUN openssl rand -base64 745 > conf/keyfile
 RUN chmod 600 /conf/keyfile
 COPY conf/ /conf/
